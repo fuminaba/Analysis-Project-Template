@@ -1,0 +1,78 @@
+name: Bug Report
+description: Report something that isn’t working
+title: "[BUG] <short description>"
+labels: [bug]
+
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What happened? Provide a clear and concise summary.
+      placeholder: "When running train.py with config X, the script crashes…"
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: Provide exact steps to reproduce the issue.
+      placeholder: |
+        1. Run command: ...
+        2. Load dataset: ...
+        3. Error appears at: ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What were you expecting to happen?
+      placeholder: "The pipeline should load the config and start training…"
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Provide environment and system details.
+      placeholder: |
+        - OS:
+        - Python version:
+        - Branch/Commit:
+        - GPU/CPU:
+        - Package versions (if relevant)
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant Logs / Error Message
+      description: Paste any errors or stack traces.
+      render: shell
+
+  - type: textarea
+    id: suggested-fixes
+    attributes:
+      label: Suggested Fixes / Ideas (Optional)
+      description: If you have thoughts on what might be causing the issue or ideas for a fix, list them here.
+      placeholder: "- Possibly uninitialized variable in data loader…"
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: How impactful or urgent is the bug?
+      options:
+        - Low
+        - Medium
+        - High
+        - Critical
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context
+      description: Add screenshots, links, or anything else that might help.

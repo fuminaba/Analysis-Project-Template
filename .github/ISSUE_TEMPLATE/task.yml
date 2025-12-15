@@ -1,0 +1,72 @@
+name: Task
+description: General tasks such as refactoring, cleanup, documentation, or maintenance
+title: "[TASK] <short description>"
+labels: [task]
+
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What needs to be done?
+      placeholder: "Refactor the data loader to reduce duplicated logic…"
+    validations:
+      required: true
+
+  - type: textarea
+    id: rationale
+    attributes:
+      label: Why This Matters
+      description: Briefly explain why this task is needed or useful.
+      placeholder: "This simplifies future feature additions and reduces technical debt…"
+    validations:
+      required: false
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Proposed Steps
+      description: Break the task into actionable steps (if applicable).
+      placeholder: |
+        - Remove unused functions
+        - Consolidate transform logic
+        - Update related tests
+    validations:
+      required: false
+
+  - type: dropdown
+    id: difficulty
+    attributes:
+      label: Difficulty
+      options:
+        - Easy
+        - Medium
+        - Hard
+      description: Rough estimate of effort required.
+    validations:
+      required: false
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options:
+        - Low
+        - Medium
+        - High
+      description: Helps triage tasks during planning.
+    validations:
+      required: false
+
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Related Issues / Dependencies
+      description: Link to other issues or PRs that this task depends on or affects.
+      placeholder: "#12, #34…"
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional Notes
+      description: Any extra information or considerations.

@@ -1,0 +1,59 @@
+name: Feature Request
+description: Suggest a new idea, enhancement, or improvement
+title: "[FEATURE] <short description>"
+labels: [enhancement]
+
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or Motivation
+      description: What’s the underlying problem or need? Why is this feature valuable?
+      placeholder: "E.g., Running the pipeline requires manually editing config files…"
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed Solution
+      description: Describe the feature you would like to see implemented.
+      placeholder: "Add a CLI argument for selecting the active model configuration…"
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considered
+      description: Did you consider any other approaches or workarounds?
+      placeholder: "I tried modifying XYZ but…"
+    validations:
+      required: false
+
+  - type: input
+    id: scope
+    attributes:
+      label: Scope and Impact
+      description: Which part of the codebase or workflow would this affect?
+      placeholder: "Training pipeline, visualization module, data loader…"
+    validations:
+      required: false
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options:
+        - Low
+        - Medium
+        - High
+      description: How urgent or impactful is this request?
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional Context
+      description: Add screenshots, references, or related issues if helpful.
